@@ -1,0 +1,73 @@
+<body>
+<div class="container">
+  <div class="tittle">Welcome to JobMela</div>
+
+  <form #form="ngForm" (ngSubmit)="submitForm(form)" >
+    <div class="user-details">
+
+      <div class="input-box">
+        <span class="details">FirstName</span>
+        <input type="text" id="fname" name="fname" [(ngModel)]="fname"  required  placeholder="Enter your Firstname">
+        
+      </div>
+  
+      <div class="input-box">
+      <span class="details">LastName</span>
+      <input type="text" id="=lname" name="lname" [(ngModel)]="lname"  required placeholder="Enter your LastName">
+    </div>
+
+  <div class="input-box">
+    <span class="details">Phone</span>
+    <input type="number" id="phone" name="phone" [(ngModel)]="phone"  required placeholder="Enter your phone">
+  </div>
+
+  <div class="input-box">
+    <span class="details">Email</span>
+    <input type="email" id="email" name="email" [(ngModel)]="email"  required placeholder="Enter your email">
+  </div>
+
+  <div class="input-box">
+    <span class="details">Date</span>
+    <input type="date" id="date" name="date" [(ngModel)]="date" placeholder="Enter the date" required >
+  </div>
+
+  <div class="input-box">
+    <span class="details">URL</span>
+    <input type="url" id="url" name="url" [(ngModel)]="url" placeholder="Enter the LinkedIn url" required >
+  </div>
+
+
+  <div class="input-box">
+    <span class="details">Photo</span>
+    <input type="file" id="file" name="file" [(ngModel)]="file" placeholder="Enter the date" required >
+  </div>
+
+
+<div class="input-box">
+  <span class="details">Gender</span><br>
+  <select name="gender" [(ngModel)]="gender" required>
+    <option value="male">Male</option>  
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+
+<div class="radio-group">
+  <span>Branch</span><br>
+  <input type="radio" name="branch" value="CS" [(ngModel)]="branch"> CS <br>
+  <input type="radio" name="branch" value="IS" [(ngModel)]="branch"> IS <br>
+  <input type="radio" name="branch" value="EC" [(ngModel)]="branch"> EC <br>
+  <input type="radio" name="branch" value="EEE" [(ngModel)]="branch"> EEE <br>
+</div>
+
+</div>
+
+
+
+
+<div class="button">
+  <input type="submit" value="Register">
+</div>
+</form>
+</div>
+</body>
